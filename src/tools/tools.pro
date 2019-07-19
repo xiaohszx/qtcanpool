@@ -1,6 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS = \
+    liccreator
 
 win32 {
 #    SUBDIRS += qtcdebugger \
