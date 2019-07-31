@@ -289,6 +289,8 @@ NR_LOCAL NR_INT InterfaceListingWin2k(NR_INT64 *pMacList, NR_UINT lstSize, NR_UI
 #include <fstream>
 #include <iostream>
 
+using namespace std;
+
 #define SG_CHECK_CONDITION      0x02
 #define SG_DRIVER_SENSE         0x08
 #define SG_ATA_16               0x85
@@ -382,6 +384,8 @@ const char sNRLicenseFile[100] = "/users/ems/.nrlicense";
 #include <fstream.h>
 #include "iostream.h"
 
+using namespace std;
+
 #define MAXINTERFACES   16
 
 const char sNRLicenseDir[100] = "/users/ems";
@@ -468,6 +472,8 @@ char *GetStrStr(const char *src, const char *dest)
 
 #include <fstream.h>
 #include "iostream.h"
+
+using namespace std;
 
 const char sNRLicenseDir[100] = "/users/ems";
 const char sNRLicenseFile[100] = "/users/ems/.nrlicense";
@@ -2368,7 +2374,7 @@ NR_EXTERN LICENSE_EXPORT NR_INT NR_API RegisterLicense(
     std::locale::global(loc);
 #else
     ofstream foutlinux(sUserFile);
-    foutlinux << sList;
+    foutlinux << pSrcData;
     foutlinux.close();
 #endif
     NR_FREE(pSrcData);

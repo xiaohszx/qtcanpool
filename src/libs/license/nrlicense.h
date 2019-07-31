@@ -20,17 +20,19 @@
 #ifndef NR_LICENSE_H
 #define NR_LICENSE_H
 
+#include <QtCore/qglobal.h>
+
 #ifdef __cplusplus
 #define NR_EXTERN extern "C"
 #else
 #define NR_EXTERN extern
 #endif
 
-#ifdef WIN32
+#ifndef NRLICENSE_LIBRARY_STATIC
 #ifdef NRLICENSE_DLL
-#define LICENSE_EXPORT  __declspec(dllexport)
+#define LICENSE_EXPORT  Q_DECL_EXPORT
 #else
-#define LICENSE_EXPORT  __declspec(dllimport)
+#define LICENSE_EXPORT  Q_DECL_IMPORT
 #endif
 #else
 #define LICENSE_EXPORT
