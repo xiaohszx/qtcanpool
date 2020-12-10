@@ -5,7 +5,6 @@ TEMPLATE  = subdirs
 SUBDIRS =   \
     qcanpool   \
     license \
-    qribbon \
     qlite \
     aggregation \
     extensionsystem \
